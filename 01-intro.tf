@@ -4,3 +4,7 @@ resource "local_file" "foo" {
   content  = "Hello world"
   filename = "/tmp/foo.bar"
 }
+
+variable "x" {
+  default = 10
+}
