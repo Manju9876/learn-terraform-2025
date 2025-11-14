@@ -48,3 +48,9 @@ variable "name" {}
 output "input" {
   value = " the value is ${var.name}"
 }
+
+variable "number" {}
+output "number" {
+  value = "the number is ${var.number}"
+}
+
