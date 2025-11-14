@@ -37,7 +37,6 @@ variable "z" {
   }
 }
 
-
 output "z" {
   value = "the name is ${var.z["name"]}, ${var.z.age}"
 }
