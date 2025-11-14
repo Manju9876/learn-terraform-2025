@@ -44,7 +44,7 @@ output "z" {
 
 #calling varible form another file
 
-variable "input" {}
+variable "name" {}
 output "input" {
-  value = " the value is ${var.input}"
+  value = " the value is ${var.name}"
 }

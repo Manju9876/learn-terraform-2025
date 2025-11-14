@@ -1,1 +1,1 @@
-input = "hello world"
+name = "hello world"
