@@ -40,3 +40,11 @@ variable "z" {
 output "z" {
   value = "the name is ${var.z["name"]}, ${var.z.age}"
 }
+
+
+#calling varible form another file
+
+variable "input" {}
+output "input" {
+  value = " the value us ${var.input}"
+}
