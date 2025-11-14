@@ -27,3 +27,17 @@ variable "y" {
 output "y" {
   value = var.y[1]
 }
+
+#mapp variables
+
+variable "z" {
+  default = {
+    name = "ram"
+    age = "23"
+  }
+}
+
+
+output "z" {
+  value = "the name is ${var.z["name"]}, ${var.z.age}"
+}
