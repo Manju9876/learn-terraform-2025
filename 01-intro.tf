@@ -46,5 +46,5 @@ output "z" {
 
 variable "input" {}
 output "input" {
-  value = " the value us ${var.input}"
+  value = " the value is ${var.input}"
 }
