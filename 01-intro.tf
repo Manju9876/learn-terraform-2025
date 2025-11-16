@@ -54,3 +54,11 @@ output "number" {
   value = "the number is ${var.number}"
 }
 
+variable "a" {
+  default = 100000
+}
+
+output "a" {
+  value = "the value of a is ${var.a}"
+}
+
