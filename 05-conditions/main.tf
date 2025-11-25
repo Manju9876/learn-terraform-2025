@@ -17,6 +17,5 @@ variable "z" {
   type = number
 }
 output "z" {
-  value = var.z == 1 ? 100 : (var.z == 2 ? 200 : 0)
+  value = var.z == 1 ? 100 : var.z == 2 ? 200 : 0
 }
-
