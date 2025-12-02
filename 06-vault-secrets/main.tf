@@ -5,11 +5,6 @@ provider "vault" {
 }
 variable "vault_token" {}
 
-data "vault_generic_secret" "vault_secrets" {
-  path = "test/demo"
-}
-
-resource "local_file" "demo" {
-  filename = "/tmp/sample.txt"
-  content = data.vault_generic_secret.vault_secrets.data["username"]
+data "vault_kv_secret" "secret_data" {
+  path = "test/data/demo"
 }
