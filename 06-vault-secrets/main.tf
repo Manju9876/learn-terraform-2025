@@ -11,5 +11,5 @@ data "vault_generic_secret" "vault_secrets" {
 
 resource "local_file" "demo" {
   filename = "/tmp/sample.txt"
-  content = data.vault_generic_secret.vault_secrets["username"]
+  content = data.vault_generic_secret.vault_secrets.data["username"]
 }
