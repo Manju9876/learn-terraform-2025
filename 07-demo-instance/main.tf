@@ -16,5 +16,5 @@ resource "aws_route53_record" "dns_record" {
   name    = "test"
   type    = "A"
   ttl     = 30
-  records = aws_instance.testing.private_ip
+  records = [aws_instance.testing.private_ip]
 }
