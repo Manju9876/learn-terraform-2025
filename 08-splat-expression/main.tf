@@ -5,13 +5,15 @@ resource "aws_instance" "main" {
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.main.id]
 }
-instance = {
+variable  "instance"  {
   default = {
     one = ""
     two = ""
     three = ""
   }
 }
+
+
 output "ids" {
   value = aws_instance.main.id
 }
