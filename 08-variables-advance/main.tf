@@ -23,3 +23,6 @@ output "instance_no_with_id" {
   value = {for i,j in aws_instance.main : i => j.id}
 }
 
+output "public_ip" {
+  value = aws_instance.main[*].public_ip
+}
