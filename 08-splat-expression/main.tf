@@ -15,5 +15,6 @@ variable  "instance"  {
 
 
 output "ids" {
-  value = aws_instance.main
+  value = [for o in aws_instance.main : o.id]
+
 }
