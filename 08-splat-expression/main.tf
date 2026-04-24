@@ -18,3 +18,7 @@ output "ids" {
   value = [for o in aws_instance.main : o.id]
 
 }
+
+output "instance_no_with_id" {
+  value = {for i,j in aws_instance.main : i => j.id}
+}
