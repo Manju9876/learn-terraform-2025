@@ -5,6 +5,10 @@ resource "aws_instance" "demo" {
   lifecycle {
     create_before_destroy = true
   }
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 variable "ami_id" {
