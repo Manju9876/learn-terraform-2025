@@ -4,5 +4,5 @@ resource "aws_instance" "demo" {
 }
 
 variable "ami_id" {
-  default = ami-0220d79f3f480ecf5
+  default = "ami-0220d79f3f480ecf5"
 }
