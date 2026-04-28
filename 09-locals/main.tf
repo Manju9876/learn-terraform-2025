@@ -5,7 +5,9 @@ variable "numbers" {
     three = "300"
   }
 }
-
+ locals {
+   simple = [ for i,j in var.numbers : i ]
+ }
 output "sample" {
-  value = [ for i,j in var.numbers : i ]
+  value = local.simple
 }
