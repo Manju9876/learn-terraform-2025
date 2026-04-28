@@ -9,8 +9,12 @@ resource "aws_instance" "demo" {
   # lifecycle {
   #   prevent_destroy = true
   # }
+  # lifecycle {
+  #   ignore_changes = [instance_type]
+  # }
+
   lifecycle {
-    ignore_changes = [instance_type]
+    replace_triggered_by = [var.ami_id] #Forces resource replacement when something changes
   }
 }
 
