@@ -7,5 +7,5 @@ variable "numbers" {
 }
 
 output "sample" {
-  value = [ for i,j in var.numbers : j ]
+  value = [ for i,j in var.numbers : i ]
 }
