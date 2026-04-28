@@ -2,9 +2,9 @@ resource "aws_instance" "demo" {
   ami = var.ami_id
   instance_type  = "t3.micro"
 
-  lifecycle {
-    create_before_destroy = true
-  }
+  # lifecycle {
+  #   create_before_destroy = true
+  # }
 
   lifecycle {
     prevent_destroy = true
