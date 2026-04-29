@@ -35,7 +35,6 @@ variable "component_name" {
       egress = {
         app  = 250
       }
-
     }
     two = {
       ingress = {
@@ -45,5 +44,5 @@ variable "component_name" {
         app = 543
       }
     }
-    }
   }
+}
